@@ -42,7 +42,7 @@ const chartConfig = {
 
 export default function ProgressChart({ data = defaultData }) {
   return (
-    <Card className="h-full overflow-hidden">
+    <Card className="h-full overflow-hidden border border-gray-200">
       <CardHeader>
         <CardTitle>Course Progress</CardTitle>
         <CardDescription>Subject-wise progress overview</CardDescription>
@@ -67,6 +67,6 @@ export default function ProgressChart({ data = defaultData }) {
           </ResponsiveContainer>
         </ChartContainer>
       </CardContent>
-\    </Card>
+    </Card>
   );
 }

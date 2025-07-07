@@ -47,10 +47,9 @@ const data = {
       icon: Megaphone,
     },
     {
-      title: "Resources",
-      url: "/student/resources",
+      title: "e-Library",
+      url: "https://opac.somaiya.edu/",
       icon: BookText,
-  
     },
     {
       title: "Settings",

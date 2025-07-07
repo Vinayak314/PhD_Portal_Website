@@ -23,7 +23,7 @@ const AllCourses = () => {
         {courses.map((course) => (
           <Card
             key={course.id}
-            className="cursor-pointer border border-gray-200 bg-white rounded-lg shadow-sm hover:shadow-lg transition-transform duration-200 ease-in-out transform hover:scale-[1.02]"
+            className="pt-0 cursor-pointer border border-gray-200 bg-white rounded-lg shadow-sm hover:shadow-lg transition-transform duration-200 ease-in-out transform hover:scale-[1.02]"
             onClick={() => navigate('/student/courses/details')}
           >
             <img

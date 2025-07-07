@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import CourseCarousel from "../../components/custom/carousel/CourseCarousel";
 import AssignmentCarousel from "@/components/custom/carousel/AssignmentCarousel";
 import ProgressChart from "../../components/custom/charts/ProgressChart";
+import { Link } from "react-router-dom";
 
 export default function StudentDashboard() {
   const {
@@ -70,19 +71,22 @@ const sampleAssignments = [
 
   return (
     <div className="flex">
-      <main className="flex-1 p-6 space-y-10 ">
+      <main className="flex-1 pt-4 space-y-10 ">
         {/* Header */}
         <div className="flex justify-between items-center">
-          <h1 className="text-xl font-bold">
+          <h1 className="text-2xl font-bold">
             Hello, <span className="text-red-500">{studentInfo?.name || "Student"}</span>!
           </h1>
         </div>
 
-        <div className="grid grid-cols-12 gap-4 p-4 min-h-screen bg-gray-50">
+        <div className="grid grid-cols-12 gap-4 min-h-screen bg-gray-50">
         {/* <!-- My Courses --> */}
         <div className="col-span-12 lg:col-span-8 space-y-2">
           <div className="bg-white rounded-lg shadow p-4">
-            <h2 className="text-lg font-semibold mb-2">My Courses</h2>
+            <div className="flex flex-row justify-between">
+              <h2 className="text-lg font-semibold mb-2">My Courses</h2>
+              <Link to="../courses" className="text-blue-700 underline">View all</Link>
+            </div>
             <div>
               <CourseCarousel courses={sampleCourses} />
             </div>
@@ -99,7 +103,7 @@ const sampleAssignments = [
           {/* <!-- Progress --> */}
           <div className="bg-white rounded-lg shadow p-4">
             <h2 className="text-lg font-semibold mb-2">Progress</h2>
-            <div className="bg-gray-100 p-3 rounded shadow ">
+            <div className="p-3">
               {/* <!-- Chart Placeholder --> */}
               <ProgressChart />
             </div>

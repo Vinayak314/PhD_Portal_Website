@@ -28,14 +28,15 @@ export function NavMain({ items }) {
                     : "hover:text-[#000000] hover:bg-muted hover:bg-[#f0f0f0]/50"
                 }`}
               >
+                {/* {item.title === "e-Library"? ():()} */}
                 <a
                   href={item.url}
+                  target={item.title === "e-Library" ? "_blank" : undefined}
+                  rel={item.title === "e-Library" ? "noopener noreferrer" : undefined}
                   className="flex items-center gap-2 px-2 py-2 transition-colors rounded-md"
                 >
                   <item.icon
-                    className={`h-5 w-5 ${
-                      isActive ? "text-[#B7202E]" : "text-white"
-                    }`}
+                    className={`h-5 w-5 `}
                   />
                   <span>{item.title}</span>
                 </a>
