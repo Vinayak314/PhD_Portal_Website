@@ -2,6 +2,8 @@ import samplePDF from '../../assets/Unit 3 Magnetic Sensors.pdf';
 
 
 const PDFViewer = () => {
+  const location = useLocation();
+  consy
 
   return (
     <div className="grid grid-cols-12 gap-4 min-h-screen bg-gray-50">

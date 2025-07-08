@@ -24,7 +24,7 @@ export function NavMain({ items }) {
                 asChild
                 className={`group ${
                   isActive
-                    ? "bg-[#ffffff] text-[#] hover:bg-[#ffffff]"
+                    ? "bg-[#ffffff] text-black hover:bg-[#ffffff] hover:text-black"
                     : "hover:text-[#000000] hover:bg-muted hover:bg-[#f0f0f0]/50"
                 }`}
               >

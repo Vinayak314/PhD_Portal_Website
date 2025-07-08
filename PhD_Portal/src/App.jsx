@@ -10,9 +10,12 @@ import AllCourses from './pages/my-courses/AllCourses.jsx';
 import AllCourseDetails from './pages/my-courses/AllCourseDetails.jsx';
 import LearningGuides from './pages/my-courses/LearningGuides.jsx';
 import StudentProfile from './pages/profile-page/StudentProfile.jsx';
-import PDFViewer from './pages/my-courses/CoursePDf.jsx';
 import AssignmentsPanel from './pages/assignment-page/AssignmentPanel.jsx';
 import AssignmentDetails from './pages/assignment-page/AssignmentDetails.jsx';
+import PDFViewer from './pages/my-courses/CoursePDf.jsx';
+
+import sample from "./assets/Unit 3 Magnetic Sensors.pdf";
+
 
 const App = () => {
   const [showLanding, setShowLanding] = useState(true);
@@ -41,8 +44,8 @@ const App = () => {
     grade: "Not Graded",
     comments: "Remarks From Faculty",
     attachments: [
-      { name: "Exp2_WriteUp.docx", url: "#" },
-      { name: "ReferenceMaterial.pdf", url: "#" },
+      { name: "Exp2_WriteUp.docx", url: sample },
+      { name: "ReferenceMaterial.pdf", url: sample },
     ],
     submission: { name: "Experiment2.pdf", url: "#" },
   },

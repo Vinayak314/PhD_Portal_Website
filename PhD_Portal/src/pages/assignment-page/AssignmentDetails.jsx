@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import {  Link, useParams } from "react-router-dom"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -43,21 +43,41 @@ export default function AssignmentDetails({ assignments }) {
             <h4 className="font-medium mt-4 mb-2">Attachments</h4>
             <div className="flex gap-2">
               {assignment.attachments.map((file, idx) => (
-                <a
-                  key={idx}
-                  href={file.url}
-                  className="underline text-blue-500"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {file.name}
-                </a>
+                <>
+                  {/* // <a
+                //   key={idx}
+                //   href={file.url}
+                //   className="underline text-blue-500"
+                //   target="_blank"
+                //   rel="noopener noreferrer"
+                // >
+                //   {file.name}
+                // </a> */}
+
+                  <Link
+                    to="pdfs"
+                    key={idx}
+                    state={{ name: file.name, url: file.url }}
+                  >
+                    {file.name}
+                  </Link>
+
+                  {/* <object
+                    class="pdf"
+                    data={file.url}
+                    width="900"
+                    height="700"
+                  ></object> */}
+                </>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 className="font-medium mt-4 mb-1">My Submission <span className="text-blue-500 text-xs cursor-pointer">Edit</span></h4>
+            <h4 className="font-medium mt-4 mb-1">
+              My Submission{" "}
+              <span className="text-blue-500 text-xs cursor-pointer">Edit</span>
+            </h4>
             <div className="p-2 border rounded w-fit">
               <a
                 href={assignment.submission.url}
@@ -72,5 +92,5 @@ export default function AssignmentDetails({ assignments }) {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
